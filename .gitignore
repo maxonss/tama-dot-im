@@ -1,0 +1,6 @@
+# macos useless files
+.DS_Store
+# db creditentials
+config/database.ini
+# old files, consider it as trash
+old/
