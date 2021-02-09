@@ -63,7 +63,7 @@ class Parameter
      * Reads the creditentials located in `config/database.ini`
      * and set the to the class attibutes
      */
-    public static function init()
+    public static function initialization()
     {
         if (file_exists('config/database.ini')) { /* creditentials file exists at the asked path */
             // File name assigned to a variable
