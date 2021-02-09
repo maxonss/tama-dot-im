@@ -53,13 +53,13 @@ class User
      */
     private $_2fa_token;
 
-    public function getId(): int
+    public function getId()
     {
         return $this->_id;
     }
     public function setId($_id)
     {
-        return $this->_id = $_id;
+        return $this->_id = ($_id == null) ? null : (int) $_id;
     }
     public function getFirstName()
     {
@@ -95,11 +95,11 @@ class User
     }
     public function getTypeId()
     {
-        return $this->_type_id;
+        return (int) $this->_type_id;
     }
     public function setTypeId($_type_id)
     {
-        return $this->_type_id = $_type_id;
+        return $this->_type_id = (int) $_type_id;
     }
     public function getDateOfBirth()
     {
@@ -123,7 +123,7 @@ class User
     }
     public function setIsLoggedIn($_is_logged_in)
     {
-        return $this->_is_logged_in = $_is_logged_in;
+        return $this->_is_logged_in = ($_is_logged_in == null) ? null : (string) $_is_logged_in;
     }
     public function get2faToken()
     {
@@ -131,7 +131,7 @@ class User
     }
     public function set2faToken($_2fa_token)
     {
-        return $this->_2fa_token = $_2fa_token;
+        return $this->_2fa_token = ($_2fa_token == null) ? null : $_2fa_token;
     }
     public function __construct(array $options = [])
     {
