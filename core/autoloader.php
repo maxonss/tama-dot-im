@@ -15,5 +15,6 @@ function autoloader($className) {
     if (file_exists("model/$className.php")) {
         require_once("model/$className.php");
     }
+    require_once("Router.php");
 }
 spl_autoload_register('autoloader');
