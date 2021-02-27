@@ -7,6 +7,7 @@ class User
 {
     /**
      * @var int
+     * @access private
      */
     private $_id;
 
@@ -46,10 +47,12 @@ class User
     private $_registration_date;
     /**
      * @var int (0 => false; 1 => true)
+     * @access private
      */
     private $_is_logged_in;
     /**
      * @var string
+     * @access private
      */
     private $_2fa_token;
 

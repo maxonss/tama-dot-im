@@ -11,7 +11,6 @@ class UserModel
      */
     public static function add(User $usr)
     {
-        var_dump($usr);
         $db = Connect::getDb();
         $q = $db->prepare("INSERT INTO users (first_name,last_name,username,password,type_id,date_of_birth) VALUES (:first_name,:last_name,:username,:password,:type_id,:date_of_birth)");
         $q->bindValue(":first_name", $usr->getFirstName());
@@ -61,8 +60,9 @@ class UserModel
 
     /**
      * Fetch all the attributes of a registration of the database
+     * using its identifier
      * @param int $id identifier of the user we want to find
-     * @return object $res
+     * @return object `new User[$res]` — return `false` if the user does not exist
      */
     public static function findById($id)
     {
