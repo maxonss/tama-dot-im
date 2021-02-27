@@ -2,6 +2,7 @@
 @import "../fonts/@font-face.min.css";
 :root {
     --background: #202020;
+    --active: rgb(111, 111, 111);
     --a-p-art: #e3e3e3
 }
 
@@ -34,11 +35,8 @@ ul {
 
 header,
 footer {
-    flex-direction: row
-}
-
-header {
-    box-shadow: 0 10px 86px 0 rgba(0, 0, 0, 0.72)
+    flex-direction: row;
+    align-items: center
 }
 
 body {
@@ -48,7 +46,7 @@ body {
 }
 
 footer {
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     height: 3vh
 }
@@ -74,24 +72,24 @@ article {
 }
 
 header {
-    min-height: 5vh;
-    margin-bottom: 3rem
+    justify-content: flex-end;
+    box-shadow: 0 10px 86px 0 rgba(0, 0, 0, 0.72);
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
 
-header>a {
+header>a>img.tama {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin: 1rem 0 0 1.3rem
-}
-
-header>a img {
-    height: 43px;
-    max-width: 43px
 }
 
 ul[role="navigation"] {
     flex-direction: row;
-    position: absolute;
-    top: 0;
-    right: 0
 }
 
 ul[role="navigation"] li {
@@ -101,18 +99,16 @@ ul[role="navigation"] li {
 }
 
 ul[role="navigation"] a {
-    letter-spacing: .02rem;
-    font-size: 1.03rem;
+    letter-spacing: .025rem;
+    font-size: 0.93rem;
+    font-weight: 400;
+    font-family: "Poppins";
     color: #fff;
     text-decoration: none;
 }
 
 ul[role="navigation"] a.active{
-    color: rgb(111, 111, 111);
-}
-
-ul[role="navigation"] a:hover{
-    color: rgb(135, 135, 135);
+    border-bottom: solid 1px rgb(149, 149, 149);  
 }
 
 article.shot {
@@ -125,7 +121,8 @@ article.shot {
 
 main {
     display: grid;
-    place-items: center
+    place-items: center;
+    margin-top: 6.3rem
 }
 
 main ul {
@@ -145,7 +142,10 @@ main ul {
 }
 
 .shot h2 {
-    margin-bottom: .4rem
+    letter-spacing: 0.025rem;
+    margin-bottom: .4rem;
+    font-size: 1.2rem;
+    font-weight: 700
 }
 
 .shot h4 {
@@ -154,7 +154,7 @@ main ul {
 }
 
 .short-desc {
-    font-family: 'Cardo', sans-serif;
+    font-family: 'PT Serif';
     font-size: 1.2rem
 }
 

@@ -1,12 +1,10 @@
-    <header role="banner">
+    <header role="banner" class="sticky">
         <a href="#">
-            <img src="public/rsc/img/logo/main-light.svg" alt="mp.com" class="mp">
+            <img src="public/rsc/img/main-light" alt="logo" class="tama">
         </a>
         <ul role="navigation">
-            <li><a class="active" href="./">Tech</a></li>
-            <li><a href="./">Apple</a></li>
-            <li><a href="./">Books</a></li>
-            <li><a href="./">Newsletter</a></li>
-            <li><a href="about.html">About</a></li>
+            <li>
+                <a class="underline" href="#">About</a>
+            </li>
         </ul>
     </header>
