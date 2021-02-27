@@ -1,3 +1,25 @@
+DirectoryIndex index.php
+
+# enable apache rewrite engine
 RewriteEngine on
-RewriteRule ^$ public/ [L]
-RewriteRule (.*) public/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
+
+# set your rewrite base
+# Edit this in your init method too if you script lives in a subfolder
+RewriteBase /
+
+# Deliver the folder or file directly if it exists on the server
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ 
+# Push every request to index.php
+RewriteRule ^(.*)$ index.php [QSA]
+
+RedirectMatch 403 ^/model/.*$
+RedirectMatch 403 ^/view/.*$
+RedirectMatch 403 ^/controller/.*$
+RedirectMatch 403 ^/core/.*$
+RedirectMatch 403 ^/config/.*$
+RedirectMatch 403 ^/vendor/.*$
