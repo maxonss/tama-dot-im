@@ -1,6 +1,5 @@
-    </main>
     <footer>
-        <p>TAMAHEREHIA ©® 2021</p>
+        <small>TAMAHEREHIA© 2021</small>
     </footer>
 </body>
 </html>

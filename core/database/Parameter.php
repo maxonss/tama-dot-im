@@ -39,22 +39,37 @@ class Parameter
      */
     private static $_password;
 
+    /**
+     * @return string
+     */
     public static function getHost()
     {
         return self::$_host;
     }
+    /**
+     * @return string
+     */
     public static function getPort()
     {
         return self::$_port;
     }
+    /**
+     * @return string
+     */
     public static function getDbName()
     {
         return self::$_db_name;
     }
+    /**
+     * @return string
+     */
     public static function getUsername()
     {
         return self::$_username;
     }
+    /**
+     * @return string
+     */
     public static function getPassword()
     {
         return self::$_password;
@@ -91,7 +106,7 @@ class Parameter
             self::$_db_name = $params['db_name'];
             self::$_username = $params['username'];
             self::$_password = $params['password'];
-        } else { /* file name has not been initialized or not found */
+        } else { /* file name has not been initialized or has not been found */
             echo "<code>database.ini</code> not found";
         }
     }

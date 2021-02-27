@@ -24,6 +24,7 @@ class Connect
      * 
      * Tries to instaciate a `PDO`object with creditentials "*got*"
      * by the `Parameter` class (explicitly read by the `Parameter` class)
+     * @return try/catch
      */
     public static function initialization() {
         try {
